@@ -1,38 +1,33 @@
-# create-svelte
+[![GitHub Banner](https://res.cloudinary.com/personal-jaime00/image/upload/v1716374255/projects/product-store-sveltekit/exq2xoxqoqsyfejnhmqu.png)](https://product-store-sveltekit.netlify.app)
+# Countries Hub 
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+- **Framework**: [SvelteKit](https://kit.svelte.dev/)
+- **Styling**: [Custom CSS and Tailwind CSS](https://tailwindcss.com/) 
+- **API**: [Supabase](https://supabase.com/) 
+- **Deployment**: [Netlify](https://www.netlify.com)
 
-## Creating a project
+## Project Overview
 
-If you're seeing this, you've probably already done this step. Congrats!
+- `lib/images` - Contains various images used in the app.
+- `lib/supabase` - Handles the creation of the Supabase client.
+- `routes/*` - Includes various dynamic components and pages used throughout the website.
+- `types/*` - Provides static data type declarations used throughout the project.
+- `utils/requests/*` - Focuses on querying and requesting the necessary information from the database.
+- `utils/defaults.ts` - Contains the default values of the app.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Built with
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+-   SvelteKit demo app
+-   Semantic HTML5 markup.
+-   Custom CSS and Tailwind CSS.
+-   JavaScript.
+-   API (Supabase). https://supabase.com/
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+## Running Locally
 
 ```bash
-npm run build
+$ git clone https://github.com/jaime00/product-store-sveltekit.git
+$ cd product-store-sveltekit
+$ npm install
+$ npm run dev
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
