@@ -60,7 +60,7 @@
 		></circle></svg
 	>
 {:else}
-	<div class="w-full max-w-2xl bg-white shadow-md rounded-lg p-6 mt-4">
+	<div class="w-full bg-white shadow-md rounded-lg p-6 mt-4">
 		<h1 class="text-2xl font-bold mb-4 text-center">List of Orders</h1>
 		<table class="min-w-full divide-y divide-gray-200">
 			<thead class="bg-gray-50">

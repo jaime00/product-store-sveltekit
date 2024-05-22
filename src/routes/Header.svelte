@@ -31,7 +31,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/link del repo" target="_blank">
+		<a href="https://github.com/jaime00/product-store-sveltekit" target="_blank">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
