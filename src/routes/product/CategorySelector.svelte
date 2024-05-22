@@ -6,12 +6,10 @@
 
 	export let title = '';
 	export let onChangeCategory = (param: string): void => {};
+
 	let categories = [];
 
-	const onChangeFilterCategory = (event) => {
-		onChangeCategory(event.target.value);
-	};
-
+	const handleChange = (event) => onChangeCategory(event.target.value);
 	onMount(async () => (categories = await getCategories()));
 </script>
 
@@ -21,7 +19,7 @@
 	<select
 		required
 		id="category-selector"
-		on:change={onChangeFilterCategory}
+		on:change={handleChange}
 		class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
 	>
 		<option value={CATEGORY_BYDEFAULT.value}>{CATEGORY_BYDEFAULT.name}</option>

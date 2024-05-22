@@ -1,10 +1,6 @@
 import supabase from '../../lib/supabase';
-import type { ProductWithCategory } from '../../types';
-// import type { Product } from '../../types';
 
-export const getProductsWithCategory = async (
-	categoryId: string
-): Promise<ProductWithCategory[]> => {
+export const getProductsWithCategory = async (categoryId: string) => {
 	let query = supabase
 		.from('product')
 		.select(

@@ -1,7 +1,7 @@
 import supabase from '$lib/supabase';
 import type { Order } from '../../types';
 
-export const createOrder = async ({ customer_id, product_id }: Order) => {
+export const createOrder = async ({ customer_id, product_id }: Order): Promise<void> => {
 	const { data: orderInfo, error: orderError } = await supabase
 		.from('order')
 		.insert([{ customer_id }])
@@ -9,7 +9,8 @@ export const createOrder = async ({ customer_id, product_id }: Order) => {
 		.single();
 
 	if (orderError) {
-		return { isSuccess: false, error: orderError };
+		console.log('Error creating order:', orderError);
+		return;
 	}
 
 	const order_id = orderInfo.id;
@@ -18,9 +19,5 @@ export const createOrder = async ({ customer_id, product_id }: Order) => {
 		.from('order_product')
 		.insert([{ order_id, product_id }]);
 
-	if (orderProductError) {
-		return { isSuccess: false, error: orderProductError };
-	}
-
-	return { isSuccess: true };
+	if (orderProductError) console.log('Error creating order:', orderProductError);
 };

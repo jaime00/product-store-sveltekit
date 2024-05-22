@@ -27,3 +27,8 @@ export type OrderDetail = {
 	quantity: number;
 	created_at: string;
 };
+
+export type supabaseResponse = {
+	error: string;
+	data: unknown[];
+};

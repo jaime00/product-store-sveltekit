@@ -105,3 +105,7 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
+
+.btn {
+	@apply inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+}
